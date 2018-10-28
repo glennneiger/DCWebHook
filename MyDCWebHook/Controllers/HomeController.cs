@@ -35,7 +35,6 @@ namespace MyDCWebHook.Controllers
             var j = JsonConvert.SerializeObject(request.QueryResult.Parameters);
             Console.WriteLine(j);
             if(request.QueryResult.Parameters["Ops"].Equals("join")){
-                Console.Write("Join OP");
                 oApi.addObjectToQueue(j.ToString(), "Test");
             }
            
